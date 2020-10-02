@@ -6,13 +6,10 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            FloorTemperature(0);
-        }
-        public static void FloorTemperature(float degrees)
-        {
-            object degreesRef = degrees;
-            var result = (int)(float)degreesRef;
-            Console.WriteLine(result);
+            Singleton one = Singleton.GetInstance;
+            one.GetDetails("From first call ");
+            Singleton two = Singleton.GetInstance;
+            two.GetDetails("From second call ");
         }
     }
 }
