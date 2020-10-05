@@ -6,10 +6,12 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            Singleton one = Singleton.GetInstance;
-            one.GetDetails("From first call ");
-            Singleton two = Singleton.GetInstance;
-            two.GetDetails("From second call ");
+            var action = new Threads();
+            action.StartThreads();
+            //Singleton one = Singleton.GetInstance;
+            //one.GetDetails("From first call ");
+            //Singleton two = Singleton.GetInstance;
+            //two.GetDetails("From second call ");
         }
     }
 }
